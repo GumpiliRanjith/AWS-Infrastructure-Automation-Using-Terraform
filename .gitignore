@@ -1,0 +1,29 @@
+cat > .gitignore <<'EOF'
+# Terraform working directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+EOF
+.terraform.lock.hcl
+
+terraform.tfstate.empty-copy
+.terraform.lock.hcl
+.tmp.driveupload
+
+.tmp.driveupload/
+.tmp.drivedownload/
+*.tfstate*
