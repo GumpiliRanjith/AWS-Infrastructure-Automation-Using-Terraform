@@ -64,7 +64,7 @@ Infrastructure Components
 * Helps protect the state file from being lost with the local project directory.
 
 📂 Project Structure
-
+```
 terraform-aws-infrastructure/
 │
 ├── backend.tf
@@ -97,7 +97,7 @@ terraform-aws-infrastructure/
 │       └── output.tf
 │
 └── README.md
-
+```
 Note: Update the directory structure to match your actual repository.
 
 ⚙️ Prerequisites
@@ -114,57 +114,59 @@ Before running this project, make sure you have:
 🚀 Deployment Steps
 
 1. Clone the Repository
+```
 
-git clone https://github.com/GumpiliRanjith/YOUR_REPOSITORY.git
+git clone https://github.com/GumpiliRanjith/AWS-Infrastructure-Automation-Using-Terraform
+```
 
 2. Navigate to the Project Directory
-
+```
 cd YOUR_REPOSITORY
-
+```
 3. Initialize Terraform
-
+```
 terraform init
-
+```
 Terraform initializes the required providers, modules, and S3 backend configuration.
 
 If you modify the backend configuration after initialization, run:
-
+```
 terraform init -reconfigure
-
+```
 If you are migrating existing local state to the S3 backend, run:
-
+```
 terraform init -migrate-state
-
+```
 4. Validate the Configuration
-
+```
 terraform validate
-
+```
 This checks whether the Terraform configuration is syntactically valid.
 
 5. Review the Execution Plan
-
+```
 terraform plan
-
+```
 This displays the infrastructure changes Terraform intends to make.
 
 6. Deploy the Infrastructure
-
+```
 terraform apply
-
+```
 Review the execution plan and type yes to confirm the deployment.
 
 7. View Outputs
-
+```
 terraform output
-
+```
 This displays the output values defined in the Terraform configuration.
 
 8. Destroy the Infrastructure
 
 After completing the project, remove the resources to avoid unnecessary AWS charges.
-
+```
 terraform destroy
-
+```
 Review the execution plan and type yes to confirm the destruction.
 
 Important: The S3 bucket used for remote state storage should be managed separately from the infrastructure being destroyed, so that the Terraform state file remains available.
