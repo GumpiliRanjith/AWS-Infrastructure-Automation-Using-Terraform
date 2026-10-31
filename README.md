@@ -44,7 +44,7 @@ Infrastructure Components
     * Improves application availability and scalability.
 
 📂 Project Structure
-
+```
 terraform-aws-infrastructure/
 │
 ├── main.tf
@@ -76,6 +76,7 @@ terraform-aws-infrastructure/
 │       └── output.tf
 │
 └── README.md
+```
 
 Note: Update the directory structure to match your actual repository.
 
